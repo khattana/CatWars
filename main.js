@@ -55,17 +55,31 @@ window.onload = function(){
 			
 		);
 		
-		var label = new enchant.Label();
-        label.text = "Player 1";
-        label.width = 128;
-        label.height = 64;
-        label.font = "12px 'Arial'";
-        game.rootScene.addChild(label);
+		var Player1 = new enchant.Label();
+        Player1.text = "Player 1";
+        Player1.width = 128;
+        Player1.height = 64;
+        Player1.font = "22px 'Arial'";
+		
+		var Score = new enchant.Label();
+		Score.x = 800;
+		Score.text = "SCORE:"	
+        Score.width = 128;
+        Score.height = 64;
+        Score.font = "22px 'Arial'";
+        
+        
+		// label.x = 100;
+		// label.y = 20;
+
+		
 		game.score = 0;
 		// scoreLabel = new ScoreLabel(8,8);	
 		// scoreLabel.score = game.score ;
 		
 		game.rootScene.addChild(map);
+		game.rootScene.addChild(Player1);
+		game.rootScene.addChild(Score);
     };
 	
     game.start();
