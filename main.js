@@ -2,21 +2,7 @@
 // based on enchant.js v0.7.1
 
 enchant();
-
-window.onload = function(){
-    var game = new Core(1024, 1024);
-	
-    game.fps = 15;
-	game.preload('map1.png');
-	game.preload('NyanCat.wav');
-		  
-  game.onload = function() {
-    game.assets['NyanCat.wav'].play();
-	
-		console.log("test");
-		var map = new Map(32,32);
-        map.image = game.assets['map1.png'];
-        map.loadData([
+var mapGrid = [
 			[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,9,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
 			[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
 			[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
@@ -49,11 +35,26 @@ window.onload = function(){
 			[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
 			[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
 			[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+			];
 			
-			]
+var getTileNum = function(x,y) {
+ return mapGrid[Math.floor(x/32)][Math.floor(y/32)];
+}			
 			
-			
-		);
+window.onload = function(){
+    var game = new Core(1024, 1024);
+	
+    game.fps = 15;
+	game.preload('map1.png');
+	game.preload('NyanCat.wav');
+		  
+  game.onload = function() {
+    game.assets['NyanCat.wav'].play();
+	
+		console.log("test");
+		var map = new Map(32,32);
+        map.image = game.assets['map1.png'];
+        map.loadData(mapGrid);
 		
 		var Player1 = new enchant.Label();
         Player1.text = "Player 1";
@@ -80,6 +81,11 @@ window.onload = function(){
 		game.rootScene.addChild(map);
 		game.rootScene.addChild(Player1);
 		game.rootScene.addChild(Score);
+		game.rootScene.addEventListener('touchend',function (e) {
+		
+			//console.log(getTileNum(e.x,e.y));
+		
+		});
     };
 	
     game.start();
