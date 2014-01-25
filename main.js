@@ -8,7 +8,10 @@ window.onload = function(){
 	
     game.fps = 15;
 	game.preload('map1.png');
-    game.onload = function(){
+	game.preload('NyanCat.wav');
+		  
+  game.onload = function() {
+    game.assets['NyanCat.wav'].play();
 	
 		console.log("test");
 		var map = new Map(32,32);
