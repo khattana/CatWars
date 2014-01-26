@@ -37,10 +37,10 @@ window.onload = function(){
 
 	game.preload('tileset-32.png');
 
-	game.preload('NyanCat.wav');
+	game.preload('NyanCat.ogg');
 		  
   game.onload = function() {
-    game.assets['NyanCat.wav'].play();
+    game.assets['NyanCat.ogg'].play();
 	
 		console.log("test");
 		var map = new Map(32,32);
