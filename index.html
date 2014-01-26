@@ -5,15 +5,16 @@
     <meta http-equiv="x-ua-compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-	<script type="text/javascript" src="jquery-2.1.0.min.js"></script> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="enchant.js"></script>
     <script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript" src="stats.json"></script>
     <link href="bootstrap.css" rel="stylesheet">
   <script type="text/javascript" src="enchant.js"></script>
-  <script src="jquery.js"></script>
+ 
   <script src="bootstrap-transition.js"></script>
   <script src="bootstrap-modal.js"></script>
+  <script src="backend.js"></script>
 
   <style>
         body {
@@ -53,6 +54,7 @@
           <div class="span4">
             <h2>Advertise</h2>
             <p></p>
+            <form id = "CostCalculator" action ="" onsubmit = "CalculateCost()">
             <tr valign="top">
               <td>Cost:</td>
               <td><input type="text" name="cost" size="10" style="width: 100px;" /></td>
@@ -66,6 +68,7 @@
               <td><input type="text" name="p2" size="10" style="width: 110px;" /></td>
               <p></p>
             </tr>
+        </form>
           </div>
           <div class="span4">
             <h2>Total Income</h2>
