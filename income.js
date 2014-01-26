@@ -23,6 +23,18 @@ function player ( playerNumber, playerScore){
 	this.playerScore = playerScore;
 }
 
+// var player1;
+// var player2;
+// var currentplayer;
+// var player1Score = 1000; 
+// var player2Score = 1000;
+// var currentplayerscore = 0;
+
+// function player ( playerNumber, playerScore){
+	// this.playerNumber = playerNumber;
+	// this.playerScore = playerScore;
+// }
+
 
 
 var mapLength = 1024;
