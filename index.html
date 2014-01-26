@@ -10,8 +10,6 @@
     <script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript" src="stats.json"></script>
     <link href="bootstrap.css" rel="stylesheet">
-    <script type="text/javascript" src="enchant.js"></script>
-    <script src="jquery.js"></script>
     <script src="bootstrap-transition.js"></script>
     <script src="bootstrap-modal.js"></script>
     <style type="text/css">
@@ -20,6 +18,15 @@
             padding: 0;
         }
     </style>
+    <script>
+        function closeDialog () {
+            $('#windowTitleDialog').modal('hide'); 
+        };
+        function okClicked () {
+            document.title = document.getElementById ("xlInput").value;
+            closeDialog ();
+        };
+    </script>
 </head>
 <body>
 <div class="divDemoBody">
