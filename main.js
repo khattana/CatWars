@@ -83,11 +83,20 @@ window.onload = function(){
 		game.rootScene.addChild(Score);
 		game.rootScene.addEventListener('touchend',function (e) {
 		coord = getTile(e.x,e.y);
+                tileNumber = getTileNum(e.x,e.y);
+		if (tileNumber ==3 || tileNumber==0 || tileNumber==1)
+		{
+		alert("You cant buy this tile!")
+	    }
+               
+	        if(tileNumber ==2)
+                {	
 		$('#windowTitleDialog').modal('show');
-		
-		mapData[coord.x][coord.y]++; 
-		map.loadData(mapData);
+                }
+		//mapData[coord.x][coord.y]++; 
+		//map.loadData(mapData);
 		});
+		
     };
 	
     game.start();
