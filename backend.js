@@ -18,9 +18,18 @@ function DoneFunc()
 	alert("what?");
 }
 
-function onMouseoverTest()
+// function onMouseoverTest()
+// {
+	// onmouseover = "onMouseoverTest()"
+  	// console.log("Is it working?");
+// }
+
+function show_coords(event)
 {
-	console.log("hello");
+var x=event.clientX;
+var y=event.clientY;
+// var x = Math.floor(event.clienty/32);
+// var y = Math.floor(event.clientx/32);
+
+// alert("X coords: " + x + ", Y coords: " + y);
 }
-
-
