@@ -41,7 +41,10 @@ window.onload = function(){
     game.fps = 15;
 
 	game.preload('tileset-32.png');
-
+	
+	// new player ( player1 , player1Score);
+	// new player ( player2 , player2Score);
+	// new player (currentplayer, currentplayerScore);
 	//game.preload('NyanCat.wav');
 		  
   game.onload = function() {
@@ -103,12 +106,6 @@ window.onload = function(){
 			// }
 		
 			// })
-		
-		
-		
-		
-		
-		
 		
 		game.rootScene.addChild(map);
 		game.rootScene.addChild(Player1);
