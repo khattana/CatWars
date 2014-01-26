@@ -13,5 +13,10 @@ function bullshit()
 
 }
 
+function DoneFunc()
+{
+	alert("what?");
+}
+
 
 
