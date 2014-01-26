@@ -116,7 +116,7 @@ window.onload = function(){
 		game.rootScene.addChild(Score);
 		game.rootScene.addEventListener('touchend',function (e) {
 		coord = getTile(e.x,e.y);
-                tileNumber = getTileNum(e.x,e.y);
+        tileNumber = getTileNum(e.x,e.y);
 				
 		console.log([Math.floor(e.y/32)][Math.floor(e.x/32)]);	
 
