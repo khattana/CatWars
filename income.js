@@ -9,20 +9,6 @@ function eachTileData(totalIncome, p1Invest, p2Invest, tileNum) {
     this.tileNum = tileNum; // 4 p1  5 p2  6 p1andp2
 }
 
-
-
-var player1;
-var player2;
-var currentplayer;
-var player1Score = 1000; 
-var player2Score = 1000;
-var currentplayerscore = 0;
-
-function player ( playerNumber, playerScore){
-	this.playerNumber = playerNumber;
-	this.playerScore = playerScore;
-}
-
 // var player1;
 // var player2;
 // var currentplayer;
