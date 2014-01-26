@@ -21,7 +21,8 @@
         body {
             margin: 0;
             padding: 0;
-			
+			background-image:url('CatWars.jpg');
+			background-size: 50% 110%;
 
         }
   </style>
@@ -48,7 +49,7 @@
   };
   </script>
 </head>
-<body onmouseover = "onMouseoverTest()">
+<body onmouseover = "show_coords(this)">
 <div class="divDemoBody">
 <h1>&nbsp</h1>
     <div id="windowTitleDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
@@ -113,6 +114,7 @@
     </div>
     <div class="divButtons">
       <a data-toggle="modal" class="btn btn-primary btn-large" onclick= "DoneFunc()">Done</a>
+	  Income : <input type="text" id= "textbox" name="income"></input>
     </div>
   </div>
 </body>

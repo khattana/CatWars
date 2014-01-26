@@ -23,10 +23,7 @@ function eachTileData(totalIncome, p1Invest, p2Invest, tileNum) {
 
 
 
-var mapLength = 1024;
-var incomeMapData = new Array();
-var x = 0;
-var y = 0;
+
 for (var i = 0; i < mapLength; i++) {
     incomeMapData.push(new eachTileData((Math.floor((Math.random()*5000)+1)), 0, 0, (mapData[i])));
 }

@@ -99,6 +99,7 @@ window.onload = function(){
 		game.rootScene.addChild(map);
 		game.rootScene.addChild(Player1);
 		game.rootScene.addChild(Score);
+		game.rootScene.addChild();
 		game.rootScene.addEventListener('touchend',function (e) {
 		coord = getTile(e.x,e.y);
         tileNumber = getTileNum(e.x,e.y);

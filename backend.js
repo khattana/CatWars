@@ -1,5 +1,11 @@
 //global variables and functions
 
+var mapLength = 1024;
+var incomeMapData = new Array();
+var x = 0;
+var y = 0;
+
+
 var player1;
 var player2;
 var currentplayer;
@@ -7,7 +13,8 @@ var currentplayer;
 //var player2Score = 1000;
 var currentplayerscore = 0;
 
-function player ( playerNumber, playerScore = 1000){
+function player ( playerNumber, playerScore){
+	if (!playerScore) playerScore = 1000;
 	this.playerNumber = playerNumber;
 	this.playerScore = playerScore;
 	this.income = 99;
@@ -74,7 +81,11 @@ function show_coords(event)
 {
 var x=event.clientX;
 var y=event.clientY;
-var i = x + (y * 32);
+var tempX = Math.floor(Math.floor(y)/32);
+    var tempY = Math.floor(x);
+    var i = (tempX + tempY);
+    i = Math.floor(i);﻿
+console.log("I value: " + i);
 alert(incomeMapData[i].totalIncome);
 
 // var x = Math.floor(event.clienty/32);
