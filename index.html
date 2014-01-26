@@ -1,23 +1,196 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Catwars : RISK game with a business skin, made for game jam. " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Catwars</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/khattana/CatWars">View on GitHub</a>
+
+          <h1 id="project_title">Catwars</h1>
+          <h2 id="project_tagline">RISK game with a business skin, made for game jam. </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/khattana/CatWars/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/khattana/CatWars/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Catwars maintained by <a href="https://github.com/khattana">khattana</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+=======
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-	<script type="text/javascript" src="jquery-2.1.0.min.js"></script> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="enchant.js"></script>
     <script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript" src="stats.json"></script>
+    <link href="bootstrap.css" rel="stylesheet">
+  <script type="text/javascript" src="enchant.js"></script>
+ 
+  <script src="bootstrap-transition.js"></script>
+  <script src="bootstrap-modal.js"></script>
+  <script src="backend.js"></script>
+
   <style>
         body {
             margin: 0;
             padding: 0;
         }
   </style>
+  <style>
+ .divButtons  {
+    width: 20%;
+    margin-left: 1000px;
+    margin-right: 0px;
+    margin-top: 600px;
+  }
+  </style>
+  <script>
+  
+  function closeDialog () {
+    $('#windowTitleDialog').modal('hide'); 
+  };
+  function okClicked () {
+    document.title = document.getElementById ("xlInput").value;
+    closeDialog ();
+  };
+  </script>
 </head>
-<body>
+<body onmouseover = "onMouseoverTest()">
+<div class="divDemoBody">
+    <h1>Test</h1>
 
+    <div id="windowTitleDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">SUB MENU</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row-fluid">
+          <div class="span4">
+            <h2>Build</h2>
+            <p><button type="button" class="btn btn-lg btn-success">Factory $500</button></p>
+            <p><button type="button" class="btn btn-lg btn-info">Shipping Depot $1000</button></p>
+            <p><button type="button" class="btn btn-lg btn-warning">Airport Rental $2000</button></p>
+            <p><button type="button" class="btn btn-lg btn-danger">Sugar Factory $1000</button></p>
+          </div>
+          <div class="span4">
+            <h2>Advertise</h2>
+            <p></p>
+            <form id = "CostCalculator" action ="" onsubmit = "CalculateCost()">
+            <tr valign="top">
+              <td>Cost:</td>
+              <td><input type="text" name="cost" size="10" style="width: 100px;" /></td>
+              <td><input type="submit" value="Buy" onclick="bullshit()" /></td>
+              <p></p>
+              <td>P1:</td>
+              <td><input type="text" name="p1" id ="hey" size="10" style="width: 110px;" /></td>
+              <p></p>
+              <p></p>
+              <td>P2:</td>
+              <td><input type="text" name="p2" size="10" style="width: 110px;" /></td>
+              <p></p>
+            </tr>
+        </form>
+          </div>
+          <div class="span4">
+            <h2>Total Income</h2>
+            <tr valign="top">
+              <p></p>
+              <td>Income:</td>
+              <td><input type="text" name="income" size="10" style="width: 90px;" /></td>
+              <p></p>
+              <p></p>
+              <td>P1:</td>
+              <td><input type="text" name="p1" size="10" style="width: 110px;" /></td>
+              <p></p>
+              <p></p>
+              <td>P2:</td>
+              <td><input type="text" name="p2" size="10" style="width: 110px;" /></td>
+              <p></p>
+            </tr>
+          </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="divDialogElements">
+          <input class="xlarge" id="xlInput" name="xlInput" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" onclick="closeDialog ();">Cancel</a>
+        <a href="#" class="btn btn-primary" onclick="okClicked ();">OK</a>
+      </div>
+    </div>
+    <div class="divButtons">
+      <a data-toggle="modal" class="btn btn-primary btn-large" onclick= "DoneFunc()">Done</a>
+    </div>
+  </div>
 </body>
 </html>
 
+>>>>>>> SidMenuMap
