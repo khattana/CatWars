@@ -14,12 +14,23 @@
   <script src="jquery.js"></script>
   <script src="bootstrap-transition.js"></script>
   <script src="bootstrap-modal.js"></script>
+
   <style>
         body {
             margin: 0;
             padding: 0;
         }
   </style>
+  <script>
+  
+  function closeDialog () {
+    $('#windowTitleDialog').modal('hide'); 
+  };
+  function okClicked () {
+    document.title = document.getElementById ("xlInput").value;
+    closeDialog ();
+  };
+  </script>
 </head>
 <body>
 <div class="divDemoBody">
