@@ -74,6 +74,7 @@ window.onload = function(){
 		// label.y = 20;
 
 		
+		
 		game.score = 0;
 		// scoreLabel = new ScoreLabel(8,8);
 		// scoreLabel.score = game.score ;
@@ -84,8 +85,8 @@ window.onload = function(){
 		game.rootScene.addEventListener('touchend',function (e) {
 		coord = getTile(e.x,e.y);
 		
-		mapData[coord.x][coord.y]++; 
-		map.loadData(mapData);
+		//mapData[coord.x][coord.y]++; 
+		//map.loadData(mapData);
 		});
     };
 	
