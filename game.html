@@ -44,7 +44,7 @@
     $('#windowTitleDialog').modal('hide'); 
   };
   function okClicked () {
-    document.title = document.getElementById ("xlInput").value;
+    document.title = $("#xlInput").val();
     closeDialog ();
   };
   </script>
@@ -70,18 +70,18 @@
           <div class="span4">
             <h2>Advertise</h2>
             <p></p>
-            <form id = "CostCalculator" action ="" onsubmit = "CalculateCost()">
+            <form id = "CostCalculator" action ="#" >
             <tr valign="top">
               <td>Total Cost:</td>
-              <td><input type="text" name="cost" size="10" style="width: 100px;" /></td>
-              <td><input type="submit" id="buyButton" value="BUY" onclick="bullshit()" /></td>
+              <td><input type="text" name="cost" id="buyId" size="10" style="width: 100px;" /></td>
+              <td><input type="button" id="buyButton" value="BUY" onclick="CalculateCost(true);" /></td>
               <p></p>
               <td>Player 1:</td>
-              <td><input type="text" name="p1" id ="hey" size="10" style="width: 110px;" /></td>
+              <td><input type="text" name="p1" id ="costP1" size="10" style="width: 110px;" /></td>
               <p></p>
               <p></p>
               <td>Player 2:</td>
-              <td><input type="text" name="p2" size="10" style="width: 110px;" /></td>
+              <td><input type="text" name="p2" id = "costP2" size="10" style="width: 110px;" /></td>
               <p></p>
             </tr>
         </form>
@@ -91,15 +91,15 @@
                         <tr valign="top">
               <p></p>
               <td>Total Income</td>
-              <td><input type="text" name="income" size="10" style="width: 90px;" /></td>
+              <td><input type="text" name="income" id="totalIncome" size="10" style="width: 90px;" /></td>
               <p></p>
               <p></p>
               <td>Player 1:</td>
-              <td><input type="text" name="p1" size="10" style="width: 110px;" /></td>
+              <td><input type="text" name="p1" id="incomeP1" size="10" style="width: 110px;" /></td>
               <p></p>
               <p></p>
               <td>Player 2:</td>
-              <td><input type="text" name="p2" size="10" style="width: 110px;" /></td>
+              <td><input type="text" name="p2" id="incomeP2" size="10" style="width: 110px;" /></td>
               <p></p>
             </tr>
           </div>

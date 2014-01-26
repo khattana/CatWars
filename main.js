@@ -39,7 +39,7 @@ window.onload = function(){
     //game.assets['NyanCat.wav'].play();
 	
 		console.log("test");
-		var map = new Map(32,32);
+		map = new Map(32,32);
         map.image = game.assets['tileset-32.png'];
 		
 		var _tmp = [];
@@ -53,7 +53,7 @@ window.onload = function(){
 		
         map.loadData(mapData);
 		
-		var Player1 = new enchant.Label();
+		Player1 = new enchant.Label();
         Player1.text = "Player 1";
         Player1.width = 128;
         Player1.height = 64;
@@ -99,29 +99,22 @@ window.onload = function(){
 		game.rootScene.addChild(map);
 		game.rootScene.addChild(Player1);
 		game.rootScene.addChild(Score);
-		game.rootScene.addChild();
 		game.rootScene.addEventListener('touchend',function (e) {
-		coord = getTile(e.x,e.y);
-        tileNumber = getTileNum(e.x,e.y);
-				
-		console.log([Math.floor(e.y/32)][Math.floor(e.x/32)]);	
-
-		
-		if (tileNumber ==3 || tileNumber==0 || tileNumber==1)
-		{
-		alert("You cant buy this tile!")
-	    }
-               
-	        if(tileNumber ==2)
-                {	
-		$('#windowTitleDialog').modal('show');
-                }
-		//mapData[coord.x][coord.y]++; 
-		//map.loadData(mapData);
-		}
-	
-		
-		);
+			var coord = getTile(e.x,e.y);
+			tileNumber = getTileNum(e.x,e.y);
+			
+			if((player1.isCurrentPlayer && (tileNumber == 5 || tileNumber == 2)) ||   
+			   (!player1.isCurrentPlayer && (tileNumber == 4 || tileNumber == 2)))    
+			{	
+				mapCol = e.x;
+				mapRow = e.y;
+				$('#windowTitleDialog').modal('show');
+				CalculateCost(false);
+			}
+			else alert("You can't build here!");
+			//mapData[coord.x][coord.y]++; 
+			//map.loadData(mapData);
+		});
 		
     };
 	
