@@ -9,6 +9,11 @@
     <script type="text/javascript" src="enchant.js"></script>
     <script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript" src="stats.json"></script>
+    <link href="bootstrap.css" rel="stylesheet">
+  <script type="text/javascript" src="enchant.js"></script>
+  <script src="jquery.js"></script>
+  <script src="bootstrap-transition.js"></script>
+  <script src="bootstrap-modal.js"></script>
   <style>
         body {
             margin: 0;
@@ -17,7 +22,70 @@
   </style>
 </head>
 <body>
+<div class="divDemoBody">
+    <h1>Test</h1>
 
+    <div id="windowTitleDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">SUB MENU</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row-fluid">
+          <div class="span4">
+            <h2>Build</h2>
+            <p><button type="button" class="btn btn-lg btn-success">Factory $500</button></p>
+            <p><button type="button" class="btn btn-lg btn-info">Shipping Depot $1000</button></p>
+            <p><button type="button" class="btn btn-lg btn-warning">Airport Rental $2000</button></p>
+            <p><button type="button" class="btn btn-lg btn-danger">Sugar Factory $1000</button></p>
+          </div>
+          <div class="span4">
+            <h2>Advertise</h2>
+            <p></p>
+            <tr valign="top">
+              <td>Cost:</td>
+              <td><input type="text" name="cost" size="10" style="width: 100px;" /></td>
+              <td><input type="submit" value="Buy" /></td>
+              <p></p>
+              <td>P1:</td>
+              <td><input type="text" name="p1" size="10" style="width: 110px;" /></td>
+              <p></p>
+              <p></p>
+              <td>P2:</td>
+              <td><input type="text" name="p2" size="10" style="width: 110px;" /></td>
+              <p></p>
+            </tr>
+          </div>
+          <div class="span4">
+            <h2>Total Income</h2>
+            <tr valign="top">
+              <p></p>
+              <td>Income:</td>
+              <td><input type="text" name="income" size="10" style="width: 90px;" /></td>
+              <p></p>
+              <p></p>
+              <td>P1:</td>
+              <td><input type="text" name="p1" size="10" style="width: 110px;" /></td>
+              <p></p>
+              <p></p>
+              <td>P2:</td>
+              <td><input type="text" name="p2" size="10" style="width: 110px;" /></td>
+              <p></p>
+            </tr>
+          </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="divDialogElements">
+          <input class="xlarge" id="xlInput" name="xlInput" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" onclick="closeDialog ();">Cancel</a>
+        <a href="#" class="btn btn-primary" onclick="okClicked ();">OK</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 
