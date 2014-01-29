@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="backend.js"></script>
+	<script type="text/javascript" src="income.js"></script>
+    <script type="text/javascript" src="enchant.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="stats.json"></script>
+    <link href="bootstrap.css" rel="stylesheet">
+  <script type="text/javascript" src="enchant.js"></script>
+ 
+  <script src="bootstrap-transition.js"></script>
+  <script src="bootstrap-modal.js"></script>
+
+  <style>
+        body {
+            margin: 0;
+            padding: 0;
+			background-image:url('CatWars.jpg');
+			background-size: 50% 110%;
+
+        }
+  </style>
+  <style>
+ .divButtons  {
+    width: 20%;
+    margin-left: 920px;
+    margin-right: 0px;
+    margin-top: 600px;
+  }
+
+    #buyButton {
+    width: 8em;
+}
+  </style>
+  <script>
+  function closeDialog () {
+    $('#windowTitleDialog').modal('hide'); 
+  };
+  function okClicked () {
+    document.title = $("#xlInput").val();
+    closeDialog ();
+  };
+  </script>
+</head>
+<body onmouseover = "show_coords(this)">
+<div class="divDemoBody">
+<h1>&nbsp</h1>
+    <div id="windowTitleDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">SUB MENU</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row-fluid">
+          <div class="span4">
+            <h2>Build</h2>
+            <br />
+            <p><button type="button" class="btn btn-lg btn-success">Factory $500</button></p><br />
+            <p><button type="button" class="btn btn-lg btn-info">Shipping Depot $1000</button></p><br />
+            <p><button type="button" class="btn btn-lg btn-warning">Airport Rental $2000</button></p><br />
+            <p><button type="button" class="btn btn-lg btn-danger">Sugar Factory $1000</button></p>
+          </div>
+          <div class="span4">
+            <h2>Advertise</h2>
+            <p></p>
+            <form id = "CostCalculator" action ="#" >
+            <tr valign="top">
+              <td>Total Cost:</td>
+              <td><input type="text" name="cost" id="buyId" size="10" style="width: 100px;" /></td>
+              <td><input type="button" id="buyButton" value="BUY" onclick="CalculateCost(true);" /></td>
+              <p></p>
+              <td>Player 1:</td>
+              <td><input type="text" name="p1" id ="costP1" size="10" style="width: 110px;" /></td>
+              <p></p>
+              <p></p>
+              <td>Player 2:</td>
+              <td><input type="text" name="p2" id = "costP2" size="10" style="width: 110px;" /></td>
+              <p></p>
+            </tr>
+        </form>
+          </div>
+          <div class="span4">
+            <h2>Total Income</h2>
+                        <tr valign="top">
+              <p></p>
+              <td>Total Income</td>
+              <td><input type="text" name="income" id="totalIncome" size="10" style="width: 90px;" /></td>
+              <p></p>
+              <p></p>
+              <td>Player 1:</td>
+              <td><input type="text" name="p1" id="incomeP1" size="10" style="width: 110px;" /></td>
+              <p></p>
+              <p></p>
+              <td>Player 2:</td>
+              <td><input type="text" name="p2" id="incomeP2" size="10" style="width: 110px;" /></td>
+              <p></p>
+            </tr>
+          </div>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" onclick="closeDialog ();">Cancel</a>
+        <a href="#" class="btn btn-primary" onclick="okClicked ();">OK</a>
+      </div>
+    </div>
+    <div class="divButtons">
+      <a data-toggle="modal" class="btn btn-primary btn-large" onclick= "DoneFunc()">Done</a>
+	  Income : <input type="text" id= "textbox" name="income"></input>
+    </div>
+  </div>
+</body>
+</html>
+
