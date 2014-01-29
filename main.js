@@ -29,6 +29,8 @@ window.onload = function(){
     game.fps = 15;
 
 	game.preload('tileset-32.png');
+	game.preload('NyanCat.ogg');
+	
 	
 	player1 = new player ( 'player1' );
 	player2 = new player ( 'player2' , 800);
@@ -37,7 +39,7 @@ window.onload = function(){
 		  
   game.onload = function() {
     
-
+		game.assets['NyanCat.ogg'].play();
 		console.log("test");
 		map = new Map(32,32);
         map.image = game.assets['tileset-32.png'];
